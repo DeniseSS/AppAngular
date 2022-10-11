@@ -1,0 +1,14 @@
+<h2>Lista de professores</h2>
+<table class="table table-striped table-hover">
+    <th>Imagem</th>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Código</th>
+    <th>Duração</th>
+    <th>Estrelas</th>
+    <tr *ngFor="let teacher of AllTeacher | async">
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.message}}</td>
+    </tr>
+  
+</table>
