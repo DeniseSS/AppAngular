@@ -25,6 +25,7 @@
         <td>{{curso.duration | date: 'dd/mm/yyyy'}} Meses</td>
         <td><app-star [rating]="curso.rating"></app-star></td>
         <td><button [routerLink]="['/curso/info', curso.id]"class="btn btn-dark">Edit</button></td>
+        <td><button (click)="deleteById(curso.id)" class="btn btn-dark">Delete</button></td>
     </tr>
   
 </table>

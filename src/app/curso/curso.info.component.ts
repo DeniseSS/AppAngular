@@ -9,18 +9,24 @@ import { CursoService } from "./curso.service";
 export class CursoInfoComponent implements OnInit{
 
 
-    curso!: Curso | undefined;
+    curso!: Curso ;
     
     constructor(private activatedRoute: ActivatedRoute, private cursoService: CursoService){}
 
-    ngOnInit(): void {  
-      
-            this.curso =this.cursoService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id')));
-      
+     
+    ngOnInit(): void { 
+        this.cursoService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id'))).subscribe({
+            next: curso => this.curso = curso,
+            error: err => console.log('Error', err)
+        });
+
     }
     save(): void {
         if(this.curso !== undefined){
-            this.cursoService.save(this.curso);
+            this.cursoService.save(this.curso).subscribe({
+                next: curso => console.log("Salvo com sucesso",curso),
+                error: err => console.log("erro", err)
+            });
         }
         
 

@@ -1,24 +1,30 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Observable } from 'rxjs';  
 import { Teacher } from "./teacher";
 import { TeacherService } from "./teacher.sevice";
 @Component ({
-    selector: 'app-teacher-lista',
     templateUrl: './teacher.list.html',
 })
+
+
 export class TeacherListComponent implements OnInit{
 
-   AllTeacher!: Observable<Teacher[]>;  
-    constructor(private teacherService: TeacherService){}
+   AllTeacher!: Observable<Teacher[]> ;
+    
+    constructor(private ActivatedRoute: ActivatedRoute, private teacherService: TeacherService){}
 
 
     ngOnInit(): void{
         this.GetAllTeacher()
-       
+        this.ActivatedRoute
     }
-    GetAllTeacher() {
-        this.AllTeacher=this.teacherService.getAll();
+    GetAllTeacher(): void {
+      this.AllTeacher= this.teacherService.getAll();
+   
+      
     }
+    
 
 
 }

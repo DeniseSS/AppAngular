@@ -16,16 +16,20 @@ export class CursoService{
    retriveAll(): Observable<Curso[]>{
         return this.httpClient.get<Curso[]>(this.cursoUrl);
    }
-   retrieveById(id: number): Curso | undefined{
-      return COURSES.find((cursoInterator:Curso) => cursoInterator.id == id);  
+   retrieveById(id: number): Observable<Curso>{
+      return this.httpClient.get<Curso>(`${this.cursoUrl}/${id}`);
    }
-   save(curso: Curso ): void{
+   save(curso: Curso ):Observable<Curso>{
         if(curso.id){
-            const index = COURSES.findIndex((cursoInterator: Curso)=>cursoInterator.id == curso.id)
-            COURSES[index]=curso;
+            return this.httpClient.put<Curso>(`${this.cursoUrl}/${curso.id}`,curso)
+        }else{
+            return this.httpClient.put<Curso>(`${this.cursoUrl}`,curso)
         }
+    }
+    DeleteById(id: number): Observable<any>{
+        return this.httpClient.delete<any>(`${this.cursoUrl}/${id}`);
    }
-}
+}   
 var COURSES: Curso[] = [
     {
         id: 1, 

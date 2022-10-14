@@ -41,6 +41,9 @@ import { CursoInfoComponent } from './curso/curso.info.component';
         path:'curso/info/:id', component: CursoInfoComponent
       },
       {
+        path:'curso/teacher/', component: TeacherListComponent
+      },
+      {
         path:'**', component: Error404Component
       }
   ]),
