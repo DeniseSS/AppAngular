@@ -17,7 +17,6 @@ export class TeacherListComponent implements OnInit{
 
     ngOnInit(): void{
         this.GetAllTeacher()
-        this.ActivatedRoute
     }
     GetAllTeacher(): void {
       this.AllTeacher= this.teacherService.getAll();
