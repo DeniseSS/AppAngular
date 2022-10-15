@@ -1,6 +1,6 @@
 <form>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Filter By:</label>
+        <h3 class="col-sm-2 col-form-label">Filter By:</h3>
         <div class="col-sm-10">
             <input [(ngModel)]="filter" name="filter"  type="text" class="form-control">
         </div>
@@ -22,10 +22,10 @@
         <td>{{curso.name}}</td>
         <td>{{curso.price}}</td>
         <td>{{curso.code | lowercase | replace: '-': ' '}}</td>
-        <td>{{curso.duration | date: 'dd/mm/yyyy'}} Meses</td>
+        <td>{{curso.duration | date: 'dd/MM/yyyy'}}</td>
         <td><app-star [rating]="curso.rating"></app-star></td>
-        <td><button [routerLink]="['/curso/info', curso.id]"class="btn btn-dark">Edit</button></td>
-        <td><button (click)="deleteById(curso.id)" class="btn btn-dark">Delete</button></td>
+        <button [routerLink]="['/curso/info', curso.id]"class="btn btn-dark mr-5">Edit</button>
+        <button (click)="deleteById(curso.id)" type="button" class="btn btn-dark m-2">Delete</button>
     </tr>
   
 </table>
