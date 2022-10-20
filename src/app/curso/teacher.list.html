@@ -2,7 +2,7 @@
 <hr>
 <div class="col-sm-12 align-items-center">
     <div class="row justify-content-center">
-        <div class="col-sm-3 card m-3 text-center bg-light p-4" *ngFor="let teacher of AllTeacher | async " >
+        <div class="col-sm-3 removeBorder card m-3 text-center bg-light p-4" *ngFor="let teacher of AllTeacher | async " >
             <img width="" style="border-radius:100%;" [src]="teacher.avatar" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{teacher.name}}</h5>
@@ -10,5 +10,5 @@
             </div>
         </div>
     </div>
-
 </div>
+

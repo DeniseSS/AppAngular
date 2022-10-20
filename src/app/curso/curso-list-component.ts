@@ -5,6 +5,7 @@ import { CursoService } from "./curso.service";
 @Component ({
     selector: 'app-curso-lista',
     templateUrl: './curso-list-component.html',
+    styleUrls: ['./style.page.css'],
 })
 export class CursoListComponent implements OnInit{
     filteredCursos: Curso[]=[];
@@ -47,6 +48,15 @@ export class CursoListComponent implements OnInit{
     }
     get filter(){
         return this._filterBy;
+    }
+  
+    rating: number = 5;
+
+    startwidth!: number;
+
+    ngOnChanges(): void {
+        this.startwidth= this.rating * 800/5;
+        
     }
 
     

@@ -1,6 +1,7 @@
 export class Teacher{
-    id!: string;
+    id!: number;
     name!: string;
     message!: string;
     avatar!: string;
+    image!: string;
 }

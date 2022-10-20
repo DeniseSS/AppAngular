@@ -9,8 +9,6 @@ import { RouterModule } from '@angular/router';
 import { CursoModule } from './curso/curso.module';
 import { CoreModule } from './core/core.module';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +25,7 @@ import { CoreModule } from './core/core.module';
       {
         path:'', redirectTo: 'cursos', pathMatch:'full'
       },
-      
      
-      {
-        path:'curso/teacher', component: TeacherListComponent
-      },
   ]),
   ],
   providers: [],

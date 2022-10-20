@@ -3,8 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 import { Observable } from 'rxjs';  
 import { Teacher } from "./teacher";
 import { TeacherService } from "./teacher.sevice";
+
 @Component ({
     templateUrl: './teacher.list.html',
+    styleUrls: ['./style.page.css'],
 })
 
 
