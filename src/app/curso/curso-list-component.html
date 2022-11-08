@@ -1,31 +1,23 @@
-<form>
-    <div class="form-group row">
-        <h3 class="col-sm-2 col-form-label">Filter By:</h3>
-        <div class="col-sm-10">
-            <input [(ngModel)]="filter" name="filter"  type="text" class="form-control">
+<header-app></header-app>
+    <div class="container bg-form">
+        <form #cursoForm="ngForm" class="form-group row justify-content-center">
+            <div class="col-sm-8">
+                <input name="links" #links type="text" class="form-control">
+            </div>
+            <button class="btn btn-cyan poppis col-sm-2">Shorten it!</button>
+        </form>
+    </div>
+    <div class="card">
+        <div class="card-body form-group row justify-content-center">
+            <div class="col-sm-6">
+                <label class="">htttp:00000/www.com</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="">htttp:00000/www.com</label>
+            </div>
+            <button class="btn btn-cyan poppis col-sm-1">Copy</button>
         </div>
     </div>
-</form>
-<hr>
+<app-statistics></app-statistics>
 
 
-<h2>Lista do Curso</h2>
-<table class="table table-striped">
-    <th>Imagem</th>
-    <th>Nome</th>
-    <th>Preço</th>
-    <th>Código</th>
-    <th>Duração</th>
-    <th>Estrelas</th>
-    <tr *ngFor="let curso of filteredCursos">
-        <td><img width="50px" [src]="curso.imageUrl"></td>
-        <td>{{curso.name}}</td>
-        <td>{{curso.price}}</td>
-        <td>{{curso.code | lowercase | replace: '-': ' '}}</td>
-        <td>{{curso.duration | date: 'dd/MM/yyyy'}}</td>
-        <td><app-star [rating]="curso.rating"></app-star></td>
-        <button [routerLink]="['/curso/info', curso.id]"class="btn btn-dark mr-5">Edit</button>
-        <button (click)="deleteById(curso.id)" type="button" class="btn btn-dark m-2">Delete</button>
-    </tr>
-  
-</table>

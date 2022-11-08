@@ -1,0 +1,10 @@
+.images{
+    border-radius: 100%;
+    background-color: hsl(257deg 27% 26%);
+    padding: 5%;
+    width: 25%;
+    margin-left:10%;
+}
+.card{
+    border:none !important;
+}

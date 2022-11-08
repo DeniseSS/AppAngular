@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,11 +9,12 @@ import { RouterModule } from '@angular/router';
 import { CursoModule } from './curso/curso.module';
 import { CoreModule } from './core/core.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     TeacherListComponent,
-    
   ],
   imports: [
     CursoModule,
@@ -25,7 +26,7 @@ import { CoreModule } from './core/core.module';
       {
         path:'', redirectTo: 'cursos', pathMatch:'full'
       },
-     
+    
   ]),
   ],
   providers: [],
