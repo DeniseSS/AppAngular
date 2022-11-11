@@ -1,6 +1,8 @@
-body{
-    background-color: hsl(257, 7%, 63%);
-}
+
+.bg-violet:last-child{
+    width: 100%;
+    background-color:hsl(230deg 25% 95%);
+}   
 .card{
     border:none !important;
 }
@@ -40,4 +42,8 @@ body{
  padding: 3em;
  background-image:url("../../assets/images/page/bg-boost-desktop.svg");
  border-radius:10px;
+
+}
+.form-control{
+    padding:2%;
 }
