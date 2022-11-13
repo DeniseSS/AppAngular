@@ -1,7 +1,8 @@
 
-.bg-violet:last-child{
+.bg-violet{
     width: 100%;
     background-color:hsl(230deg 25% 95%);
+    z-index: -1;
 }   
 .card{
     border:none !important;
@@ -22,8 +23,13 @@
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: hsl(0, 0%, 75%);
     
+}
+.cyan{
+    color: hsl(180, 66%, 49%);
+}
+.grey-dark{
+    color:hsl(260, 8%, 14%);
 }
 .btn-cyan{
     background: hsl(180, 66%, 49%);

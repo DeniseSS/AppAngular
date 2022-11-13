@@ -24,3 +24,46 @@
     border:none;
 }
 
+.bg-banner{
+    background-position: right bottom;
+    background-color:hsl(257deg 27% 26%);
+    background-image:url("../../../../assets/images/page/bg-boost-desktop.svg");
+    padding:5%;
+   
+   }
+.align-item{
+    justify-items:center;
+    justify-content:center;
+    display:flex;
+    height:100%;
+}
+.btn-cyan{
+    background: hsl(180, 66%, 49%);
+    color: white;
+    border-radius:25px;
+    width:10em;
+}
+.btn-cyan:hover{
+    background: hsl(180, 68%, 40%);
+    color: white
+}
+.poppis{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  
+    
+}
+
+@media (min-width: 1200px){
+    .gy-lg-10 {
+        margin-top: 3rem;
+    }
+    .gy-lg-15 {
+        margin-top: 6rem;
+    }
+}
+
+
+

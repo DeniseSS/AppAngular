@@ -20,6 +20,8 @@
 .btn-cyan{
     background: hsl(180, 66%, 49%);
     color: white;
+    width: 10em;
+    font-weight: 700;
 }
 .btn-cyan:hover{
     background: hsl(180, 68%, 40%);
@@ -28,3 +30,11 @@
 .border-radius{
     border-radius: 25px;
 }
+@media only screen and (min-width: 576px)  {
+    img {
+        width: 100px;
+        height: 30px;
+      
+    }
+    
+  }
