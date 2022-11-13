@@ -1,25 +1,27 @@
 <header-app></header-app>
 <div class="bg-violet">
-    <div class="container bg-form">
-        <form #cursoForm="ngForm" class="form-group row justify-content-center">
-            <div class="col-sm-8">
-                <input name="links" #links type="text" class="form-control">
-            </div>
-            <button class="btn btn-cyan poppis col-sm-2">Shorten it!</button>
-        </form>
-    </div>
-    <div class="container justify-content-center">
-        <div class="">
-            <div class="card mt-5">
-                <div class="card-body form-group row align-items-center justify-content-around">
-                    <div class="col-sm-6">
-                        <label class="poppis grey-dark">htttp:00000/www.com</label>
-                    </div>
-                    <div class="col-sm-2">
-                        <label class="poppis cyan ">htttp:00000/www.com</label>
-                    </div>
-                    <button class="btn btn-cyan poppis col-sm-1">Copy</button>
+    <div class="container">
+        <div class="col-sm-12 bg-form">
+            <form #cursoForm="ngForm" class="row justify-content-center">
+                <div class="col-sm-8 m-2">
+                    <input name="links" #links type="text" class="w-100 h-100 p-3 form-control">
                 </div>
+                <div class="col-sm-2 m-2">
+                    <button class="btn btn-cyan poppis form-control h-100 p-3">Shorten it!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container justify-content-center pd-top">
+        <div class="card">
+            <div class="card-body form-group row align-items-center justify-content-around">
+                <div class="col-sm-6">
+                    <label class="poppis grey-dark">htttp:00000/www.com</label>
+                </div>
+                <div class="col-sm-2">
+                    <label class="poppis cyan ">htttp:00000/www.com</label>
+                </div>
+                <button class="btn btn-cyan poppis col-sm-1">Copy</button>
             </div>
         </div>
     </div>

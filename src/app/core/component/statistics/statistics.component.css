@@ -55,6 +55,13 @@
   
     
 }
+.hr{
+    height: 0.5em;
+    width: 50%;
+    background:hsl(180, 66%, 49%);
+    transform: translate(15em, 13em);
+
+}
 
 @media (min-width: 1200px){
     .gy-lg-10 {
@@ -64,6 +71,20 @@
         margin-top: 6rem;
     }
 }
-
+@media only screen and (max-width: 600px) {
+    .gy-lg-10 {
+        margin-top: 3rem;
+    }
+    .gy-lg-15 {
+        margin-top: 3rem;
+    }
+    .hr{
+        transform: rotate(90deg);
+        transform-origin: center;
+        translate: 0px 30em;
+        width:100%;
+        
+    }
+}
 
 

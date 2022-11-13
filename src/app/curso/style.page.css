@@ -45,11 +45,13 @@
 .bg-form{
  background-position: right bottom;
  background-color:hsl(257deg 27% 26%);
- padding: 3em;
+ padding: 2em;
  background-image:url("../../assets/images/page/bg-boost-desktop.svg");
  border-radius:10px;
+ transform: translateY(-4.5rem);
 
 }
-.form-control{
-    padding:2%;
+
+.pd-top{
+    transform: translateY(-3rem);
 }
