@@ -16,3 +16,27 @@
 .border-radius{
     border-radius: 25px;
 }
+@media only screen and (max-width: 600px) {
+    .align-text{
+        text-align:center;
+    }
+    .column-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .bg-nav{
+        padding:1.5em;
+        background-color:hsl(257deg 27% 26%);
+        border-radius:5%;    
+        margin-top:1.5em;
+        color: white;    
+    }.btn-cyan{
+        width:100%;
+    }
+    .nav-link{
+        color:white !important;
+    }
+    .hr::before{
+        content: ''
+    }
+}

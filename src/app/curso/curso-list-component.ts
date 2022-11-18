@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Curso } from "./Curso";
-import { CursoService } from "./curso.service";
+import { FormsModule } from "@angular/forms";
 
 @Component ({
     selector: 'app-curso-lista',
@@ -8,58 +7,17 @@ import { CursoService } from "./curso.service";
     styleUrls: ['./style.page.css'],
 })
 export class CursoListComponent implements OnInit{
-    filteredCursos: Curso[]=[];
-
-    _cursos:  Curso[]=[]; 
-    _filterBy!:string;
-
-    constructor(private CursoService: CursoService){}
-
-
-    ngOnInit(): void{
-        this.retrieveAll();
-       
-    }
-    retrieveAll(): void{
-       this.CursoService.retriveAll().subscribe({
-            next: cursos =>{
-                this._cursos = cursos;
-                this.filteredCursos=this._cursos;
-            },
-            error: err => console.log("Erro", err)
-        });
-        
-    }
-    deleteById(cursoId: number): void{
-        this.CursoService.DeleteById(cursoId).subscribe({
-            next:()=>{
-                console.log("Delete with success");
-                this.retrieveAll();
-            },
-            error: err => console.log("Erro", err)
-         
-        })
-
+    ngOnInit(): void {   
     }
 
-    set filter(value:string){
-        this._filterBy=value;
-        this.filteredCursos=this._cursos.filter((curso: Curso)=>curso.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    data: any ={
+        links: '',
     }
-    get filter(){
-        return this._filterBy;
-    }
+     getLink: any
+    OnSubmit(){
+        this.getLink = this.data.links= document.getElementById('links');
+        }
   
-    rating: number = 5;
-
-    startwidth!: number;
-
-    ngOnChanges(): void {
-        this.startwidth= this.rating * 800/5;
-        
-    }
-
     
-
 
 }

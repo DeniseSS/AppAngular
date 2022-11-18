@@ -1,16 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-transparent poppis p-4">
-    <div class="container">
+    <div class="container align-text">
       <a class="navbar-brand" [routerLink]="['/cursos']"><img src="../../../../assets/images/page/logo.svg"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse bg-nav" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" [routerLink]="['/cursos']" routerLinkActive="active" aria-current="page" href="#">Features</a>
           <a class="nav-link active"  [routerLink]="['/curso/teacher']" routerLinkActive="active">Pricing</a>
           <a class="nav-link active"  [routerLink]="['/curso/teacher']" routerLinkActive="active">Resources</a>
         </div>
-        <div class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <hr class=""> 
+        <div class="navbar-nav d-flex justify-content-end flex-wrap ms-md-auto align-text">
           <a class="nav-link active" [routerLink]="['/cursos']" routerLinkActive="active" aria-current="page" href="#">Login</a>
           <button class="nav-link btn btn-cyan border-radius">Sign up</button>
         </div>

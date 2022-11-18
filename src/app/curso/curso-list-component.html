@@ -2,24 +2,24 @@
 <div class="bg-violet">
     <div class="container">
         <div class="col-sm-12 bg-form">
-            <form #cursoForm="ngForm" class="row justify-content-center">
+            <form #linkForm="ngForm" class="row justify-content-center">
                 <div class="col-sm-8 m-2">
-                    <input name="links" #links type="text" class="w-100 h-100 p-3 form-control">
+                    <input name="links" #links type="text" class="w-100 h-100 p-3 form-control" ngModel id="links">
                 </div>
                 <div class="col-sm-2 m-2">
-                    <button class="btn btn-cyan poppis form-control h-100 p-3">Shorten it!</button>
+                    <button #submit class="btn btn-cyan poppis form-control h-100 p-3" (click)="OnSubmit()">Shorten it!</button>
                 </div>
             </form>
         </div>
     </div>
-    <div class="container justify-content-center pd-top">
-        <div class="card">
+    <div class="container justify-contentcenter pd-top">
+        <div class="card" *ngIf="getLink">
             <div class="card-body form-group row align-items-center justify-content-around">
                 <div class="col-sm-6">
-                    <label class="poppis grey-dark">htttp:00000/www.com</label>
+                    <label class="poppis grey-dark">{{links.value}}</label>
                 </div>
                 <div class="col-sm-2">
-                    <label class="poppis cyan ">htttp:00000/www.com</label>
+                    <label class="poppis cyan">{{links.value}}</label>
                 </div>
                 <button class="btn btn-cyan poppis col-sm-1">Copy</button>
             </div>
